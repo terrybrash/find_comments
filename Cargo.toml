@@ -1,0 +1,18 @@
+[package]
+name = "shhhh"
+version = "0.7.2"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT"
+description = "No comments."
+repository = "https://github.com/terrybrash/shhhh"
+keywords = ["comments", "lint", "codegen", "agent", "cli"]
+categories = ["command-line-utilities", "development-tools"]
+
+[[bin]]
+name = "shhhh"
+path = "src/main.rs"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
